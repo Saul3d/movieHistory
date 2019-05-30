@@ -1,0 +1,22 @@
+{
+  "user1": {
+    "fname": "Mary",
+    "lname": "West",
+    "id": "12233"
+  },
+  "user2": {
+    "fname": "Robert",
+    "lname": "Rice",
+    "id": "22222"
+  },
+  "user3": {
+    "fname": "Greg",
+    "lname": "Korte",
+    "id": "33333"
+  },
+  "user4": {
+    "fname": "Adam ",
+    "lname": "Barnhard",
+    "id": "24242"
+  }
+ }

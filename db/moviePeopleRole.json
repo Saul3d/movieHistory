@@ -1,0 +1,20 @@
+{
+ "movieRolePeople1": {
+   "id":"11",
+   "peopleId": "user1",
+   "movieId": "movie1",
+   "roleId": "movie1"
+ },
+ "movieRolePeople2": {
+   "id":"22",
+   "peopleId": "user2",
+   "movieId": "movie2",
+   "roleId": "role2"
+ },
+ "movieRolePeople3": {
+   "id":"33",
+   "peopleId": "user2",
+   "movieId": "movie2",
+   "roleId": "role3"
+ }
+}
