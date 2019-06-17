@@ -1,3 +1,6 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 import util from '../../helpers/util';
 import movieData from '../../helpers/data/moviesData';
 import smash from '../../helpers/smash';
@@ -47,4 +50,24 @@ const moviesStringBuilder = (uid) => {
     }).catch(err => console.error('could not get movie', err));
 };
 
-export default { moviesStringBuilder, combiningMoviesAndUserMovies };
+const createNewMovie = (e) => {
+  e.preventDefault();
+  const newMovie = {
+    image: document.getElementById('image').value,
+    title: document.getElementById('title').value,
+    genre: document.getElementById('genre').value,
+    rating: document.getElementById('rating').value,
+    uid: firebase.auth().currentUser.uid,
+  };
+  movieData.addNewMovie(newMovie)
+    .then(() => {
+      document.getElementById('image').value = '';
+      document.getElementById('title').value = '';
+      document.getElementById('genre').value = '';
+      document.getElementById('rating').value = '';
+      movieData.getMovies(firebase.auth().currentUser.uid);
+    })
+    .catch(err => console.error('no new friend for you', err));
+};
+
+export default { moviesStringBuilder, combiningMoviesAndUserMovies, createNewMovie };
