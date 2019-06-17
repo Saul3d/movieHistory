@@ -30,7 +30,6 @@ const getUserMovies = uid => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-
 const addNewMovie = movieObject => axios.post(`${firebaseUrl}/movies.json`, movieObject);
 
 export default { getMovies, addNewMovie, getUserMovies };
