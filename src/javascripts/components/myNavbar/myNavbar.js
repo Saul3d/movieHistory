@@ -1,6 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import './myNavbar.scss';
+
 const navbarEvents = () => {
   const navLinks = document.getElementsByClassName('nav-link');
   for (let i = 0; i < navLinks.length; i += 1) {

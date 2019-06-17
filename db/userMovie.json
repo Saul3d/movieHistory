@@ -10,11 +10,11 @@
     "id":"1111",
     "movieId": "movie2",
     "isWatched": "false",
-    "rating": 1,
+    "rating": 3 ,
     "uid": "52BXI5qUs5crd8LA8z48n17lQcf2"
   },
   "userMovie3": {
-    "id":"1144",
+    "id":"1143",
     "movieId": "movie3",
     "isWatched": "true",
     "rating": 4,
@@ -22,9 +22,30 @@
   },
   "userMovie4": {
     "id":"1144",
-    "movieId": "movie3",
-    "isWatched": "true",
+    "movieId": "movie4",
+    "isWatched": "false",
     "rating": 3,
-    "uid": "1111"
+    "uid": "1112"
+  },
+  "userMovie5": {
+    "id":"1145",
+    "movieId": "movie5",
+    "isWatched": "true",
+    "rating": 5,
+    "uid": "1112"
+  },
+  "userMovie6": {
+    "id":"1146",
+    "movieId": "movie6",
+    "isWatched": "true",
+    "rating": 4,
+    "uid": "1112"
+  },
+  "userMovie7": {
+    "id":"1147",
+    "movieId": "movie7",
+    "isWatched": "true",
+    "rating": 4,
+    "uid": "1113"
   }
  }

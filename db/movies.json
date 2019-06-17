@@ -1,32 +1,44 @@
 {
-  "movie1": {
-    "title": "Get Out",
-    "genre": "horror",
-    "imageUrl": "https://cdn.vox-cdn.com/thumbor/-cvQhe_To6fdhM3QSJYsj1Wv_Xc=/0x0:2038x1012/1200x800/filters:focal(791x298:1117x624)/cdn.vox-cdn.com/uploads/chorus_image/image/53404039/getoutcover.0.jpg",
-    "movieRatingId":"R"
+  "movie1" : {
+    "genre" : "Action",
+    "imageUrl" : "https://www.joblo.com/assets/images/joblo/posters/2019/03/avengers-endgame-poster-xl.jpg",
+    "movieRatingId" : "PG-13",
+    "title" : "Avengers:End Game"
   },
-  "movie2": {
-    "title": "Dark Knight",
-    "genre": "drama",
-    "imageUrl": "https://www.nowplayingnashville.com/wp-content/uploads/sites/www.nowplayingnashville.com/images/2016/02/htc.png",
-    "movieRatingId":"R"
+  "movie2" : {
+    "genre" : "action",
+    "imageUrl" : "https://www.joblo.com/assets/images/oldsite/posters/images/full/The-Mummy-Poster-Large3.jpg",
+    "movieRatingId" : "R",
+    "title" : "The Mummy"
   },
-  "movie3": {
-    "title": "The Greatest Showman",
-    "genre": "drama",
-    "imageUrl": "https://www.nowplayingnashville.com/wp-content/uploads/sites/www.nowplayingnashville.com/images/2016/02/htc.png",
-    "movieRatingId":"PG-13"
+  "movie3" : {
+    "genre" : "Action",
+    "imageUrl" : "https://www.joblo.com/assets/images/joblo/posters/2019/01/John-Wick-Chapter-3-poster-2.jpg",
+    "movieRatingId" : "R",
+    "title" : "John Wick"
   },
-  "movie4": {
-    "title": "Forgetting Sarah Marshall",
-    "genre": "drama",
-    "imageUrl": "https://www.nowplayingnashville.com/wp-content/uploads/sites/www.nowplayingnashville.com/images/2016/02/htc.png",
-    "movieRatingId":"PG-13"
+  "movie4" : {
+    "genre" : "Action",
+    "imageUrl" : "https://www.joblo.com/assets/images/oldsite/posters/images/full/dark-phoenix-june7.jpg",
+    "movieRatingId" : "PG-13",
+    "title" : "Dark Phoenix"
   },
-  "movie5": {
-    "title": "The Greatest Showman",
-    "genre": "drama",
-    "imageUrl": "https://www.nowplayingnashville.com/wp-content/uploads/sites/www.nowplayingnashville.com/images/2016/02/htc.png",
-    "movieRatingId":"PG-13"
+  "movie5" : {
+    "genre" : "Comedy",
+    "imageUrl" : "https://www.joblo.com/assets/images/oldsite/posters/images/full/1999-poster-office_space-1.jpg",
+    "movieRatingId" : "PG-13",
+    "title" : "Office Space"
+  },
+  "movie6" : {
+    "genre" : "Action",
+    "imageUrl" : "https://www.joblo.com/assets/images/oldsite/posters/images/full/hobbit2-poster1.jpg",
+    "movieRatingId" : "R",
+    "title" : "The Hobbit"
+  },
+  "movie7" : {
+    "genre" : "Comedy",
+    "imageUrl" : "https://www.joblo.com/assets/images/oldsite/posters/images/full/Deadpool-poster-8.jpg",
+    "movieRatingId" : "R",
+    "title" : "Deadpool"
   }
- }
+}
