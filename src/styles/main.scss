@@ -5,9 +5,14 @@ body {
 }
 
 .hide{
-  display:none;
+  display: none !important
 }
-
+.card{
+  margin:20px 0;
+}
 .nav-link{
   cursor: pointer;
+}
+.movie-image{
+  height:773px;
 }

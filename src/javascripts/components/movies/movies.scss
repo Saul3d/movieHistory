@@ -1,0 +1,11 @@
+.star{
+  width:1.5625em;
+  margin:.625em .3125em;
+  fill:#999; 
+  &:hover{
+    fill:rgb(238, 224, 26);
+  }
+}
+.add{
+  fill:rgb(238, 224, 26);
+}

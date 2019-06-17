@@ -1,0 +1,48 @@
+#navbar .navbar{
+  width: 100%;
+  display:flex;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  right:0px;
+  top:0px
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 29px;
+  background-color: #343a40;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color:rgba(255, 255, 255, .5);
+  &:hover {
+    background-color: #333 !important;
+    color:rgba(255, 255, 255, .75);
+  }
+}
+.movieMenuDropdown {
+	&:hover {
+		.dropdown-content {
+      display: block;
+		}
+	}
+}
+
+.dropdown:hover{ 
+  .movieLinks {
+    background-color: #333;
+    cursor: pointer;
+  }
+}

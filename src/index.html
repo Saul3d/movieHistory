@@ -1,36 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Movie History Database</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Movie History</title>
 </head>
 <body>
-  <div id="navbar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Movies</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a id="navbar-button-auth" class="nav-link">Authentication</a>
-            </li>
-            <li class="nav-item">
-              <a id="navbar-button-movies" class="nav-link hide">My Movies</a>
-            </li>
-            <li class="nav-item">
-              <a id="navbar-button-logout" class="nav-link hide">Logout</a>
-            </li>
-          </ul>
+ <div id = "navbar">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <a class="navbar-brand" href="#">Movies</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item">
+           <a id="navbar-button-auth" class="nav-link">Authentication</a>
+         </li>
+         <li class="nav-item">
+           <a id="navbar-button-movies" class="nav-link hide movieMenuDropdown">My Movie History</a>
+           
+          </li>
+         <li class="nav-item">
+           <a id="navbar-button-logout" class="nav-link hide">Logout</a>
+         </li>
+       </ul>
+       <div class="dropdown">
+        <div class="dropdown-content">
+          <a href="#" id="add-movies-button">Add Movie</a>
+          <a href="#">Watchlist</a>
         </div>
-      </nav>
-</div>
-<div id="auth"></div>
-<div id="movies" class="hide">
-  <h2>Movies</h2>
-</div>
+      </div>
+     </div>
+
+   </nav>
+ </div>
+ <div id="auth"></div>
+ <!-- <button id="add-movies-button" class="center btn btn-info">Add Movie</button> -->
+ <div id="movies" class=" d-flex flex-wrap hide">
+   <div id="movieRolePeople"></div>
+   <div id="userMovie"></div>
+ </div>
+ <div id="new-movie" class="hide">
+   <form class="col-6 offset-3">
+     <div class="form-group">
+       <label for="name">Movie</label>
+       <input type="text" class="form-control" id="imageUrl" placeholder="img">
+       <input type="text" class="form-control" id="title" placeholder=" Enter title">
+       <input type="text" class="form-control" id="genre" placeholder=" Enter genre">
+       <input type="text" class="form-control" id="movieRatingId" placeholder=" Enter rating">
+     </div>
+     <button type="submit" id="saveNewMovie" class="btn btn-primary">Add Movie</button>
+   </form>
+ </div>
 </body>
 </html>
