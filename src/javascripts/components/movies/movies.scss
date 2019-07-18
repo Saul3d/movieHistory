@@ -1,3 +1,7 @@
+html{
+  background-color: radial-gradient(rgb(37, 93, 233), rgb(9, 44, 159));
+  font-family:proxima-nova, sans-serif;
+}
 .star{
   width:1.5625em;
   margin:.625em .3125em;
@@ -8,4 +12,29 @@
 }
 .add{
   fill:rgb(238, 224, 26);
+}
+.deleteBtn {
+  
+  svg{
+    & > *{
+      pointer-events: none;
+    }
+    font-size: 3em;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color:rgba(0,0,0,.3);
+    &:hover{
+      color:rgb(236, 5, 5);
+      cursor:pointer;
+    }
+  }
+}
+.card{
+  position:relative;
+  .card-title{
+    color:#333;
+    font-size:2.5em;
+    font-weight:bold;
+  }
 }

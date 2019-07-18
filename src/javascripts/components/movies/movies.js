@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
@@ -6,19 +7,36 @@ import movieData from '../../helpers/data/moviesData';
 import smash from '../../helpers/smash';
 import './movies.scss';
 
+const deleteMovieEvent = (e) => {
+  console.error(e.target);
+  const movieId = e.target.id;
+  movieData.deleteMovie(movieId)
+    // eslint-disable-next-line max-len
+    .then(() => moviesStringBuilder(firebase.auth().currentUser.uid))
+    .catch(err => console.error('Could not delete', err));
+};
+
+const addEvents = () => {
+  const deleteButtons = document.getElementsByClassName('delete-movie-btn');
+  Array.from(deleteButtons).forEach((btn) => {
+    btn.addEventListener('click', deleteMovieEvent);
+  });
+};
+
 const combiningMoviesAndUserMovies = uid => movieData.getMovies()
   .then(movies => movieData.getUserMovies(uid)
     .then(movieStarsArray => smash.combineMoviesAndRatings(movies, movieStarsArray))
-    .catch(err => console.error('no friends', err)));
+    .catch(err => console.error('no movies found', err)));
 
 const moviesStringBuilder = (uid) => {
   combiningMoviesAndUserMovies(uid)
     .then((movies) => {
-      // console.error(movies);
+      console.error('movies: ', movies);
       let domString = '';
       movies.forEach((movie) => {
         domString += '<div class="col-lg-4 col-md-3 col-sm-6">';
         domString += '<div class="card text-center">';
+        domString += `<div class="deleteBtn delete-movie-btn"><i id="${movie.id}" class="far fa-times-circle"></i></div>`;
         domString += `<img class="movie-image" src=${movie.imageUrl} />`;
         domString += `<div class="card-title">${movie.title}</div>`;
         domString += '<div class="card-body">';
@@ -47,6 +65,7 @@ const moviesStringBuilder = (uid) => {
         domString += '</div>';
       });
       util.printToDom('movies', domString);
+      addEvents();
     }).catch(err => console.error('could not get movie', err));
 };
 
@@ -70,4 +89,7 @@ const createNewMovie = (e) => {
     .catch(err => console.error('no new friend for you', err));
 };
 
-export default { moviesStringBuilder, combiningMoviesAndUserMovies, createNewMovie };
+// eslint-disable-next-line max-len
+export default {
+  moviesStringBuilder, combiningMoviesAndUserMovies, createNewMovie, deleteMovieEvent,
+};

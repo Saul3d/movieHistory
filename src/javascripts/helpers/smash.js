@@ -4,6 +4,7 @@ const combineMoviesAndRatings = (movies, usermovies) => movies.map((movie) => {
   if (ums) {
     m.rating = ums.rating;
     m.isWatched = ums.isWatched;
+    m.uid = ums.uid;
   }
   // console.error(m);
   return m;

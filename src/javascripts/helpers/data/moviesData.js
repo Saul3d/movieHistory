@@ -21,15 +21,23 @@ const getUserMovies = uid => new Promise((resolve, reject) => {
   axios.get(`${firebaseUrl}/userMovie.json?uid="${uid}"&sortBy="uid"`)
     .then((results) => {
       const userMovieResults = results.data;
-      const movieStarsArray = [];
-      Object.keys(userMovieResults).forEach((starResult) => {
-        movieStarsArray.push(userMovieResults[starResult]);
+      const newMovieWithMovieId = [];
+      Object.keys(userMovieResults).forEach((newMovieWithIdResult) => {
+        newMovieWithMovieId.push(userMovieResults[newMovieWithIdResult]);
+        // console.error(newMovieWithMovieId);
       });
-      resolve(movieStarsArray);
+      resolve(newMovieWithMovieId);
     })
     .catch(err => reject(err));
 });
 
 const addNewMovie = movieObject => axios.post(`${firebaseUrl}/movies.json`, movieObject);
 
-export default { getMovies, addNewMovie, getUserMovies };
+const deleteMovie = movieId => axios.delete(`${firebaseUrl}/movies/${movieId}.json`);
+
+export default {
+  getMovies,
+  addNewMovie,
+  getUserMovies,
+  deleteMovie,
+};
